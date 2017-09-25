@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;   
+    /* max-width: 768px; */
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+
+p {
+    color: grey;
+}
+
+ul {
+    display: flex;
+    align-content: center;    
+    flex-wrap: wrap;
+    flex-direction: row;
+    list-style-type: none;
+    margin-bottom: 50px;
+}
+.title {
+    color: black;
+}
+
+/* li { 
+    padding: 20px;
+} */
+
+.jobs {
+    display: flex;
+    color: #1F2E4F;
+    background: #289DD6;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.active-link {
+    background: lightblue;
+}

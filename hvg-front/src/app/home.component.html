@@ -1,0 +1,15 @@
+<div class="container">
+    <img src="../assets/header.jpg" alt="header">
+        <h1>CSATLAKOZZ HOZZÁNK!</h1>
+        <p>A 4iG cégcsoport versenykepes fizetessel, extra juttatasi csomagokkal, fiatalos kollektivaval, kepzesi lehetosegekkel es szep kornyezettel var.</p>        
+        <ul>
+            <li class="jobs" 
+                *ngFor="let item of jobTitle"
+                [routerLink]="['/', item.pageId]">
+                <p class="title">{{ item.name }}</p>
+            </li>
+        </ul>
+        <!-- [routerLink]="['/', item.pageId]"
+        (click)="getId(item.pageId)"
+        routerLinkActive="active-link" -->
+  </div>
