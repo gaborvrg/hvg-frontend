@@ -14,28 +14,28 @@ export class SignupComponent implements OnInit {
     constructor(public pageIdService: PageidService, private httpService: HttpService) {}
 
     onSubmit() {
-        // console.log('signup component: ' , this.pageIdService.pageObj['pageId']);
-        console.log(this.myForm.value);
+        // console.log('signup component: ' , this.pageIdService.pageObj);
+        // console.log(this.myForm.value);
 
         const obj = {
             mail: this.myForm.value.email,
             name: this.myForm.value.name,
-            role: this.myForm.value.pageName
+            role: this.myForm.value.pageId
         };
 
-        console.log(obj);
+        // console.log(obj);
 
         this.httpService.putToBackend(obj).subscribe(
             (response) => console.log(response),
             (error) => console.log(error)
         );
 
-        this.myForm.reset();
+        // this.myForm.reset();
     }
 
     ngOnInit() {
         this.myForm = new FormGroup({
-            pageId: new FormControl(this.pageIdService.pageObj['pageId']),
+            pageId: new FormControl(this.pageIdService.pageObj['description']),
             pageName: new FormControl(this.pageIdService.pageObj['name']),
             name: new FormControl(null, Validators.required),
             email: new FormControl(null, [
