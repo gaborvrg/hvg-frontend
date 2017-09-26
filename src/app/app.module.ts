@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { routing } from './app.routing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { LinuxComponent } from './jobs/linux.component';
@@ -16,6 +17,8 @@ import { HelpdeskComponent } from './jobs/helpdesk.component';
 import { M3dkComponent } from './jobs/m3d.component';
 import { MasajanlatComponent } from './jobs/masajanlat.component';
 import { SignupComponent } from './singnup.component';
+import { PageidService } from './pageId.service';
+import { HttpService } from './http.service';
 
 @NgModule({
   declarations: [
@@ -37,9 +40,10 @@ import { SignupComponent } from './singnup.component';
     BrowserModule,
     FormsModule,
     routing,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [PageidService, HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

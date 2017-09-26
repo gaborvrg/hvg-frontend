@@ -4,8 +4,9 @@
         <h1>CSATLAKOZZ HOZZÁNK!</h1>
         <p>A 4iG cégcsoport versenykepes fizetessel, extra juttatasi csomagokkal, fiatalos kollektivaval, kepzesi lehetosegekkel es szep kornyezettel var.</p>        
         <ul>
-            <li class="jobs" 
+            <li class="jobs {{item.pageId}}"
                 *ngFor="let item of jobTitle"
+                (click)="getId(item)"
                 [routerLink]="['/', item.pageId]">
                 <p class="title">{{ item.name }}</p>
             </li>

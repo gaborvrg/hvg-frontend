@@ -1,5 +1,8 @@
+import { HttpService } from './http.service';
+import { PageidService } from './pageId.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { User } from './user.model';
 
 @Component({
     selector: 'app-signup',
@@ -8,14 +11,32 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class SignupComponent implements OnInit {
     myForm: FormGroup;
 
-    constructor() {}
+    constructor(public pageIdService: PageidService, private httpService: HttpService) {}
 
     onSubmit() {
-        console.log(this.myForm);
+        // console.log('signup component: ' , this.pageIdService.pageObj['pageId']);
+        console.log(this.myForm.value);
+
+        const obj = {
+            mail: this.myForm.value.email,
+            name: this.myForm.value.name,
+            role: this.myForm.value.pageName
+        };
+
+        console.log(obj);
+
+        this.httpService.putToBackend(obj).subscribe(
+            (response) => console.log(response),
+            (error) => console.log(error)
+        );
+
+        this.myForm.reset();
     }
 
     ngOnInit() {
         this.myForm = new FormGroup({
+            pageId: new FormControl(this.pageIdService.pageObj['pageId']),
+            pageName: new FormControl(this.pageIdService.pageObj['name']),
             name: new FormControl(null, Validators.required),
             email: new FormControl(null, [
                 Validators.required,
