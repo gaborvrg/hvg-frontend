@@ -11,15 +11,16 @@ export class HomeComponent {
   title = 'app';
 
   jobTitle = [
-    new User('linux', 'Linux rendszermernok', ''),
-    new User('aspnet', 'Asp Net fejleszto', ''),
-    new User('bitanacs', 'BI Tanacsado', ''),
-    new User('java', 'Java fejleszto', ''),
-    new User('airline', 'Airline rendszermernok', ''),
-    new User('desktop', 'IT Desktop', ''),
-    new User('it-erp', 'ERP Alkalmazas Rendszermernok', ''),
-    new User('helpdesk', 'IT Helpdesk', ''),
-    new User('m3d', 'M3D Epiteszemrnok', '')
+    new User('linux', 'LINUX RENDSZERMÉRNÖK', ''),
+    new User('aspnet', 'ASP.NET FEJLESZTŐ', ''),
+    new User('bitanacs', 'BI TANÁCSADÓ', ''),
+    new User('java', 'JAVA FEJLESZTŐ', ''),
+    new User('airline', 'AIRLINE RENDSZERMÉRNÖK', ''),
+    new User('desktop', 'IT ESKTOP MUNKATÁRS', ''),
+    new User('iterp', 'ERP ALKALMAZÁS RENDSZERMÉRNÖK', ''),
+    new User('helpdesk', 'IT HELPDESK MUNKATÁRS', ''),
+    new User('m3d', 'M3D ÉPÍTÉSZMÉRNÖK', ''),
+    new User('masajanlat', 'MÁS AJÁNLATOT KÉREK', '')
     ];
 }
 

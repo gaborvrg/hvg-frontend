@@ -8,6 +8,13 @@ import { LinuxComponent } from './jobs/linux.component';
 import { AspnetComponent } from './jobs/aspnet.component';
 import { BitanacsComponent } from './jobs/bitanacs.component';
 import { HomeComponent } from './home.component';
+import { JavaComponent } from './jobs/java.component';
+import { AirlineComponent } from './jobs/airline.component';
+import { DesktopComponent } from './jobs/desktop.component';
+import { ItErpComponent } from './jobs/iterp.component';
+import { HelpdeskComponent } from './jobs/helpdesk.component';
+import { M3dkComponent } from './jobs/m3d.component';
+import { MasajanlatComponent } from './jobs/masajanlat.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +22,14 @@ import { HomeComponent } from './home.component';
     LinuxComponent,
     AspnetComponent,
     BitanacsComponent,
-    HomeComponent
+    HomeComponent,
+    JavaComponent,
+    AirlineComponent,
+    DesktopComponent,
+    ItErpComponent,
+    HelpdeskComponent,
+    M3dkComponent,
+    MasajanlatComponent
   ],
   imports: [
     BrowserModule,

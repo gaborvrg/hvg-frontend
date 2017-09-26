@@ -1,8 +1,14 @@
 .container {
     display: flex;
+    /* justify-content: center; */
     flex-direction: column;
+    /* align-items: center; */
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;   
-    /* max-width: 768px; */
+    max-width: 100%;
+}
+
+img {
+    height: 200px;
 }
 
 h1 {
@@ -13,19 +19,18 @@ h1 {
 
 p {
     color: grey;
+    text-align: center;
 }
 
 ul {
     display: flex;
-    align-content: center;    
+    justify-content: center;  
     flex-wrap: wrap;
     flex-direction: row;
     list-style-type: none;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
 }
-.title {
-    color: black;
-}
+
 
 /* li { 
     padding: 20px;
@@ -35,13 +40,33 @@ ul {
     display: flex;
     color: #1F2E4F;
     background: #289DD6;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     justify-content: center;
     align-items: center;
     margin: 10px;
     border-radius: 10px;
 }
+
+p.title {
+    color: black;
+    text-align: center;
+}
+
+
+.jobs:last-child {
+    width: 75%;
+    height: 80px;
+    background-color: white;
+    border: 1px solid #289DD6;
+
+}
+
+/* .jobs:last-child {
+    background-color: white;
+    border: 1px solid #289DD6;
+
+} */
 
 .active-link {
     background: lightblue;

@@ -1,0 +1,21 @@
+li:first-child {
+    list-style: none;
+}
+
+p {
+    text-align: center;
+}
+
+h1 {
+    color: red;
+}
+
+.image {
+    background-image: url('../../assets/humansoft_logo.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;   
+    width: 200px;
+    height: 100px;
+}
+
