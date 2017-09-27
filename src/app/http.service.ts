@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class HttpService {
 
-    url = 'http://hvgbackend.herokuapp.com';
+    url = 'https://hvgbackend.herokuapp.com';
 
     constructor(private http: Http) { }
 

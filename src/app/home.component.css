@@ -90,5 +90,5 @@ input[type="checkbox"]{
 }
 
 .masajanlat-input {
-    top: -25px!important;
+    display: none;
 }

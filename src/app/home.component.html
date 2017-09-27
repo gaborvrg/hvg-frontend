@@ -11,6 +11,19 @@
                 <p class="title" (click)="getId(item)" [routerLink]="['/', item.pageId]">{{ item.name }}</p>
             </li>
         </ul>
+        
+    <div *ngIf="formCanBeVisible">
+        <form [formGroup]="myForm" (ngSubmit)="moreSubmit()">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" formControlName="name">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" formControlName="email">
+            </div>
+            <button type="submit" [disabled]="!myForm.valid">Submit</button>
+        </form>
     </div>
 
     <footer>
