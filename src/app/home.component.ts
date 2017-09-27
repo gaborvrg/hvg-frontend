@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { HttpService } from './http.service';
 
 import { PageidService } from './pageId.service';
 import { User } from './user.model';
@@ -10,9 +12,8 @@ import { User } from './user.model';
 })
 export class HomeComponent {
   title = 'app';
-
+  myForm: FormGroup;
   // jobId: string;
-
   jobTitle = [
     new User('linux', 'LINUX RENDSZERMÉRNÖK', 'LINUX_RENDSZERMERNOK'),
     new User('aspnet', 'ASP.NET FEJLESZTŐ', 'ASP_NET_FEJLESZTO'),
@@ -27,7 +28,7 @@ export class HomeComponent {
     ];
 
     applieadJobs = [];
-
+    validForm;
     formCanBeVisible = false;
 
     selectedObj = {
@@ -43,13 +44,22 @@ export class HomeComponent {
       "MAS_AJANLAT": false,
     };
 
-    constructor(public pageIdService: PageidService) {}
+    constructor(public pageIdService: PageidService, private httpService: HttpService) {}
+
+    ngOnInit() {
+      this.myForm = new FormGroup({
+          name: new FormControl(null, Validators.required),
+          email: new FormControl(null, [
+              Validators.required,
+              Validators.email
+          ])
+      });
+    }
 
     getId(param) {
       this.pageIdService.pageObj = param;
       // console.log(param);
     }
-
 
     checkedRoles(name){
       if(this.selectedObj[name] === false){
@@ -57,20 +67,45 @@ export class HomeComponent {
       } else if (this.selectedObj[name] === true) {
         this.selectedObj[name] = false;;        
       }
-      console.log(this.selectedObj[name]);
+      this.appliedRolesValidator();
+    }
+
+    Submit(role) {
+
+      const obj = {
+          mail: this.myForm.value.email,
+          name: this.myForm.value.name,
+          role: role
+      };
+
+      this.httpService.putToBackend(obj).subscribe(
+          (response) => console.log(response),
+          (error) => console.log(error)
+      );
+    }
+
+    appliedRolesValidator(){
+      for(let key in this.selectedObj) {
+        if(Object.values(this.selectedObj).includes(true)){
+          this.formCanBeVisible = true;
+        } else {
+          this.formCanBeVisible = false;         
+        }
+        if(!this.applieadJobs.includes(key) && this.selectedObj[key] === true) {
+          this.applieadJobs.push(key);
+          console.log(this.applieadJobs);
+        } else if(this.applieadJobs.includes(key) && this.selectedObj[key] === false) {
+          const index = this.applieadJobs.indexOf(key);
+          this.applieadJobs.splice(index, 1);
+          console.log(this.applieadJobs);          
+        }
+      }
+    }
+
+    moreSubmit() {
+      for(let i = 0; i < this.applieadJobs.length; i++) {
+        this.Submit(this.applieadJobs[i]);
+      }
+      this.myForm.reset();      
     }
 }
-
-// jobTitle = [
-//   new User('linux', 'LINUX RENDSZERMÉRNÖK', ''),
-//   new User('aspnet', 'ASP.NET FEJLESZTŐ', ''),
-//   new User('bitanacs', 'BI TANÁCSADÓ', ''),
-//   new User('java', 'JAVA FEJLESZTŐ', ''),
-//   new User('airline', 'AIRLINE RENDSZERMÉRNÖK', ''),
-//   new User('desktop', 'IT DESKTOP MUNKATÁRS', ''),
-//   new User('iterp', 'ERP ALKALMAZÁS RENDSZERMÉRNÖK', ''),
-//   new User('helpdesk', 'IT HELPDESK MUNKATÁRS', ''),
-//   new User('m3d', 'M3D ÉPÍTÉSZMÉRNÖK', ''),
-//   new User('masajanlat', 'MÁS AJÁNLATOT KÉREK', '')
-//   ];
-

@@ -16,7 +16,19 @@
         (click)="getId(item.pageId)"
         routerLinkActive="active-link" -->
 
-
+    <div *ngIf="formCanBeVisible">
+        <form [formGroup]="myForm" (ngSubmit)="moreSubmit()">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" formControlName="name">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" formControlName="email">
+            </div>
+            <button type="submit" [disabled]="!myForm.valid">Submit</button>
+        </form>
+    </div>
 
     <footer>
         <p>4iG cégcsoport > 4 leányvállalat: 4iG Nyrt., Humansoft Kft., Axis Kft., Mensor3D Kft. / 420 fő / 13 milliárd árbevétel</p>
