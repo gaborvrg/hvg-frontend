@@ -19,6 +19,7 @@ import { MasajanlatComponent } from './jobs/masajanlat.component';
 import { SignupComponent } from './singnup.component';
 import { PageidService } from './pageId.service';
 import { HttpService } from './http.service';
+import { AdminComponent } from './admin.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { HttpService } from './http.service';
     HelpdeskComponent,
     M3dkComponent,
     MasajanlatComponent,
-    SignupComponent
+    SignupComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

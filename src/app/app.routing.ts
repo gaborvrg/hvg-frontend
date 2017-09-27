@@ -12,6 +12,7 @@ import { ItErpComponent } from './jobs/iterp.component';
 import { HelpdeskComponent } from './jobs/helpdesk.component';
 import { M3dkComponent } from './jobs/m3d.component';
 import { MasajanlatComponent } from './jobs/masajanlat.component';
+import { AdminComponent } from './admin.component';
 
 const APP_ROUTES: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -25,6 +26,7 @@ const APP_ROUTES: Routes = [
     { path: 'helpdesk', component: HelpdeskComponent },
     { path: 'm3d', component: M3dkComponent },
     { path: 'masajanlat', component: MasajanlatComponent },
+    { path: 'admin', component: AdminComponent },
     { path: '**', component: HomeComponent}
 ];
 
