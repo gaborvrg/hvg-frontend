@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterLinkActive } from '@angular/router';
 
 import { PageidService } from './pageId.service';
 import { User } from './user.model';
@@ -10,8 +11,6 @@ import { User } from './user.model';
 })
 export class HomeComponent {
   title = 'app';
-
-  // jobId: string;
 
   jobTitle = [
     new User('linux', 'LINUX RENDSZERMÉRNÖK', 'LINUX_RENDSZERMERNOK'),
@@ -51,26 +50,12 @@ export class HomeComponent {
     }
 
 
-    checkedRoles(name){
-      if(this.selectedObj[name] === false){
+    checkedRoles(name) {
+      if (this.selectedObj[name] === false) {
         this.selectedObj[name] = true;
       } else if (this.selectedObj[name] === true) {
-        this.selectedObj[name] = false;;        
+        this.selectedObj[name] = false;
       }
       console.log(this.selectedObj[name]);
     }
 }
-
-// jobTitle = [
-//   new User('linux', 'LINUX RENDSZERMÉRNÖK', ''),
-//   new User('aspnet', 'ASP.NET FEJLESZTŐ', ''),
-//   new User('bitanacs', 'BI TANÁCSADÓ', ''),
-//   new User('java', 'JAVA FEJLESZTŐ', ''),
-//   new User('airline', 'AIRLINE RENDSZERMÉRNÖK', ''),
-//   new User('desktop', 'IT DESKTOP MUNKATÁRS', ''),
-//   new User('iterp', 'ERP ALKALMAZÁS RENDSZERMÉRNÖK', ''),
-//   new User('helpdesk', 'IT HELPDESK MUNKATÁRS', ''),
-//   new User('m3d', 'M3D ÉPÍTÉSZMÉRNÖK', ''),
-//   new User('masajanlat', 'MÁS AJÁNLATOT KÉREK', '')
-//   ];
-

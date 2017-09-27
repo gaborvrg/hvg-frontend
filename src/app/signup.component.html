@@ -1,13 +1,13 @@
-<h1>SIGN UP</h1>
+<h1 style="margin: 10px;">FELIRATKOZÁS</h1>
 
 <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
-    <div>
-        <label for="name">Name</label>
+    <div style="display: inline">
+        <label for="name">Név</label>
         <input type="text" id="name" formControlName="name">
     </div>
-    <div>
+    <div style="display: inline">
         <label for="email">Email</label>
         <input type="email" id="email" formControlName="email">
     </div>
-    <button type="submit" [disabled]="!myForm.valid">Submit</button>
+    <button type="submit" [disabled]="!myForm.valid">Elküld!</button>
 </form>

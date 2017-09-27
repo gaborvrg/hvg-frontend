@@ -1,10 +1,9 @@
 .container {
+    max-width: 768px;
     display: flex;
-    /* justify-content: center; */
     flex-direction: column;
-    /* align-items: center; */
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;   
-    max-width: 100%;
+    justify-content: center;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;       
 }
 
 img {
@@ -16,11 +15,22 @@ h1 {
     display: flex;
     justify-content: center;
     font-size: 25px;
+    color: #1C9CD9;
+    /* padding: 30px; */
+    margin: 30px;
 }
 
 p {
     color: grey;
     text-align: center;
+    width: 80%;
+    font-size: 110%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 ul {
@@ -29,13 +39,7 @@ ul {
     flex-wrap: wrap;
     flex-direction: row;
     list-style-type: none;
-    /* margin-bottom: 50px; */
 }
-
-
-/* li { 
-    padding: 20px;
-} */
 
 .jobs {
     display: flex;
@@ -50,8 +54,9 @@ ul {
 }
 
 p.title {
-    color: black;
+    color:#1D2D51;
     text-align: center;
+    font-weight: bold;
     width: 100%;
     height: 100%;
     display: flex;
@@ -60,23 +65,20 @@ p.title {
     margin-left: -40px;
 }
 
-
 .jobs:last-child {
     width: 75%;
     height: 80px;
     background-color: white;
     border: 1px solid #289DD6;
-
 }
 
-/* .jobs:last-child {
-    background-color: white;
-    border: 1px solid #289DD6;
-
-} */
+footer {
+    display: flex;
+    justify-content: center;
+}
 
 .active-link {
-    background: lightblue;
+    background: black;
 }
 
 input[type="checkbox"]{
