@@ -26,11 +26,38 @@ export class HomeComponent {
     new User('masajanlat', 'MÁS AJÁNLATOT KÉREK', 'MAS_AJANLAT')
     ];
 
+    applieadJobs = [];
+
+    formCanBeVisible = false;
+
+    selectedObj = {
+      "LINUX_RENDSZERMERNOK": false,
+      "ASP_NET_FEJLESZTO": false,
+      "BI_TANACSADO": false,
+      "JAVA_FEJLESZTO": false,
+      "AIRLINE_RENDSZERMERNOK": false,
+      "IT_DESKTOP": false,
+      "ERP_ALK_RENDSZERMERNOK": false,
+      "IT_HELPDESK": false,
+      "M3D_EPITESZMERNOK": false,
+      "MAS_AJANLAT": false,
+    };
+
     constructor(public pageIdService: PageidService) {}
 
     getId(param) {
       this.pageIdService.pageObj = param;
       // console.log(param);
+    }
+
+
+    checkedRoles(name){
+      if(this.selectedObj[name] === false){
+        this.selectedObj[name] = true;
+      } else if (this.selectedObj[name] === true) {
+        this.selectedObj[name] = false;;        
+      }
+      console.log(this.selectedObj[name]);
     }
 }
 

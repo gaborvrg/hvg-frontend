@@ -6,9 +6,10 @@
         <ul>
             <li class="jobs {{item.pageId}}"
                 *ngFor="let item of jobTitle"
-                (click)="getId(item)"
-                [routerLink]="['/', item.pageId]">
-                <p class="title">{{ item.name }}</p>
+
+                >
+                <input class="check {{item.pageId}}-input" type="checkbox" (change)="checkedRoles(item.description)">
+                <p class="title" (click)="getId(item)" [routerLink]="['/', item.pageId]">{{ item.name }}</p>
             </li>
         </ul>
         <!-- [routerLink]="['/', item.pageId]"
