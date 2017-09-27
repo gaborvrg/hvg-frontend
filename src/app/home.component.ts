@@ -93,11 +93,9 @@ export class HomeComponent {
         }
         if(!this.applieadJobs.includes(key) && this.selectedObj[key] === true) {
           this.applieadJobs.push(key);
-          console.log(this.applieadJobs);
         } else if(this.applieadJobs.includes(key) && this.selectedObj[key] === false) {
           const index = this.applieadJobs.indexOf(key);
-          this.applieadJobs.splice(index, 1);
-          console.log(this.applieadJobs);          
+          this.applieadJobs.splice(index, 1);         
         }
       }
     }
