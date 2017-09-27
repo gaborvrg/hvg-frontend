@@ -1,6 +1,6 @@
-<h1 style="margin: 10px;">FELIRATKOZÁS</h1>
+<h1 style="margin: 10px 30px;">FELIRATKOZÁS</h1>
 
-<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()" style="display: flex; justify-content: space-around;" >
     <div style="display: inline">
         <label for="name">Név</label>
         <input type="text" id="name" formControlName="name">

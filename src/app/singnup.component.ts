@@ -14,8 +14,6 @@ export class SignupComponent implements OnInit {
     constructor(public pageIdService: PageidService, private httpService: HttpService) {}
 
     onSubmit() {
-        // console.log('signup component: ' , this.pageIdService.pageObj);
-        // console.log(this.myForm.value);
 
         const obj = {
             mail: this.myForm.value.email,
@@ -23,14 +21,13 @@ export class SignupComponent implements OnInit {
             role: this.myForm.value.pageId
         };
 
-        // console.log(obj);
 
         this.httpService.putToBackend(obj).subscribe(
             (response) => console.log(response),
             (error) => console.log(error)
         );
 
-        // this.myForm.reset();
+        this.myForm.reset();
     }
 
     ngOnInit() {
