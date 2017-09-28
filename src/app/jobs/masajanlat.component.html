@@ -1,10 +1,16 @@
 <img class="headerImg" src="../assets/tablet_header.png" alt="header">
-<div class="container" style="margin: 100px auto;"> 
-        <div class="image"></div>
-</div>    
+<div class="container">
 
-<app-signup></app-signup>
+    <app-side></app-side>
+
+    <div class="main">
+        <!-- <div class="image"></div> -->
+
+        <app-signup></app-signup>
+
+    </div>    
+
 <div class="back-div" [routerLink]="['/home']">
         <section class="back">◄</section>
         <section class="backText">Vissza</section>
-    </div>
+</div>
