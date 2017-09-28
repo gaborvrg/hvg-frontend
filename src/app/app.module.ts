@@ -20,6 +20,7 @@ import { SignupComponent } from './singnup.component';
 import { PageidService } from './pageId.service';
 import { HttpService } from './http.service';
 import { AdminComponent } from './admin.component';
+import { SideComponent } from './jobs/side.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { AdminComponent } from './admin.component';
     M3dkComponent,
     MasajanlatComponent,
     SignupComponent,
-    AdminComponent
+    AdminComponent,
+    SideComponent
   ],
   imports: [
     BrowserModule,

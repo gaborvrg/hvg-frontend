@@ -1,0 +1,11 @@
+
+<div class="side">
+    <ul>
+        <li class="jobs {{item.pageId}}"
+            *ngFor="let item of jobTitle"
+            [routerLink]="['/', item.pageId]" 
+            (click)="getId(item)">
+            <p class="title">{{ item.name }}</p>
+        </li>
+    </ul>
+</div>
