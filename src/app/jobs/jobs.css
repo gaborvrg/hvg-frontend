@@ -59,3 +59,22 @@ app-signup {
     font-weight: bold;
 }
 
+.back {
+    color: #289DD6;
+    font-size: 30px;
+}
+
+.backText {
+    color: #289DD6;
+    font-size: 11px;
+}
+
+.back-div {
+    position: relative;
+    top: 40px;
+    width: 70px!important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

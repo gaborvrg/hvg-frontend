@@ -94,10 +94,10 @@ input[type="checkbox"]{
     width: 25px; /*Desired width*/
     height: 25px; /*Desired height*/
     border-radius: 4px;
-    background-color: #a77e2d !important;
 }
 
 
 .masajanlat-input {
     display: none;
 }
+
