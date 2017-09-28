@@ -1,51 +1,56 @@
-<img class="headerImg" src="../assets/tablet_header.png" alt="header">
+<img class="headerImg" src="../assets/tablet_header.png" alt="header" [routerLink]="['/home']">
 <div class="container">
-        
-    <div class="image"></div>
 
-    <h1>ASP.Net fejlesztő</h1>
+    <app-side></app-side>
 
-    <ul>
-        <li><h2>A feladatok, amelyek Rád várnak:</h2></li>
-        <li>ASP.Net alkalmazások fejlesztése</li>
-        <li>adatbázisok tervezése, fejlesztése</li>
-        <li>fejlesztői csapatmunkában történő aktív részvétel</li>
-        <li>saját fejlesztési feladatokkal kapcsolatos adminisztratív és dokumentációs feladatok ellátása</li>
-    </ul>
+    <div class="main">
+        <!-- <div class="image"></div> -->
 
-    <ul>
-        <li><h2>Téged keresünk ha: </h2></li>
-        <li>van legalább 2-3 éves .NET fejlesztői tapasztalatod</li>
-        <li>ismered az alábbi Web technológiákat: 
-            <ul>
-                <li>HTML (HTML5 ismerete előny)</li>
-                <li>CSS (CSS3, LESS ismerete előny)</li>
-                <li>JavaScript, JQuery könyvtár tapasztalat</li>
-            </ul>
-        </li>
-        <li>XML, XPath, XSD, XSL, (JSON ismerete előny)</li>
-        <li>legalább írásban és dokumentáció olvasás/megértés szintjén tudsz angolul</li>
-        <li>pontos, alapos és igényes vagy a munkavégzésedre</li>
-        <li>motivált, proaktív hozzáállással végzed a feladataid</li>
-    </ul>
 
-    <ul>
-        <li><h2>Szuper, ha rendelkezel még:</h2></li>
-        <li>adatbázis tervezési ismeretekkel</li>
-        <li>adatbázis szerverek, SQL nyelv ismerettel (MS SQL, Oracle)</li>
-        <li>Hibernate köztes réteg ismerettel</li>
-        <li>van szakirányú felsőfokú végzettséged</li>
-        <li>JSP, további Java Web Framework ismereted is van (pl. Spring, JSF, Struts)</li>
-    </ul>
+        <h1>ASP.Net fejlesztő</h1>
 
-    <ul>
-        <li><h2>Amit cserébe mi kínálunk Neked:</h2></li>
-        <li>folyamatos szakmai támogatást és képzési lehetőségeket</li>
-        <li>fejlődési- és karrierlehetőséget</li>
-        <li>jó hangulatú, összetartó, dinamikus csapatban való Budapesti vagy Székesfehérvári munkavégzést</li>
-    </ul>
+        <ul>
+            <li><h2>A feladatok, amelyek Rád várnak:</h2></li>
+            <li>ASP.Net alkalmazások fejlesztése</li>
+            <li>adatbázisok tervezése, fejlesztése</li>
+            <li>fejlesztői csapatmunkában történő aktív részvétel</li>
+            <li>saját fejlesztési feladatokkal kapcsolatos adminisztratív és dokumentációs feladatok ellátása</li>
+        </ul>
 
-    <app-signup></app-signup>
+        <ul>
+            <li><h2>Téged keresünk ha: </h2></li>
+            <li>van legalább 2-3 éves .NET fejlesztői tapasztalatod</li>
+            <li>ismered az alábbi Web technológiákat: 
+                <ul>
+                    <li>HTML (HTML5 ismerete előny)</li>
+                    <li>CSS (CSS3, LESS ismerete előny)</li>
+                    <li>JavaScript, JQuery könyvtár tapasztalat</li>
+                </ul>
+            </li>
+            <li>XML, XPath, XSD, XSL, (JSON ismerete előny)</li>
+            <li>legalább írásban és dokumentáció olvasás/megértés szintjén tudsz angolul</li>
+            <li>pontos, alapos és igényes vagy a munkavégzésedre</li>
+            <li>motivált, proaktív hozzáállással végzed a feladataid</li>
+        </ul>
+
+        <ul>
+            <li><h2>Szuper, ha rendelkezel még:</h2></li>
+            <li>adatbázis tervezési ismeretekkel</li>
+            <li>adatbázis szerverek, SQL nyelv ismerettel (MS SQL, Oracle)</li>
+            <li>Hibernate köztes réteg ismerettel</li>
+            <li>van szakirányú felsőfokú végzettséged</li>
+            <li>JSP, további Java Web Framework ismereted is van (pl. Spring, JSF, Struts)</li>
+        </ul>
+
+        <ul>
+            <li><h2>Amit cserébe mi kínálunk Neked:</h2></li>
+            <li>folyamatos szakmai támogatást és képzési lehetőségeket</li>
+            <li>fejlődési- és karrierlehetőséget</li>
+            <li>jó hangulatú, összetartó, dinamikus csapatban való Budapesti vagy Székesfehérvári munkavégzést</li>
+        </ul>
+
+        <app-signup></app-signup>
+    </div>
     <div class="back-div" [routerLink]="['/home']">
         <section class="back">◄</section>
         <section class="backText">Vissza</section>
