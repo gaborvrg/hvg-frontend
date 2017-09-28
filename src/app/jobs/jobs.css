@@ -8,6 +8,10 @@
     margin: 50px;
 }
 
+.headerImg {
+    max-width: 768px;
+}
+
 .image {
     background-image: url('../../assets/humansoft_logo.jpg');
     background-size: 100%;
