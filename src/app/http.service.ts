@@ -14,8 +14,8 @@ export class HttpService {
     }
 
     getEmailList() {
-        const data = {'any': 'any'};
+        const data = {'code': '900f58c03d9673db3ad17f80256bbf7e'};
         const headers = new Headers({'Content-Type': 'application/json'});
-        return this.http.put(this.url + 'process.env.DATAENDPOINT', data, {headers: headers});
+        return this.http.put(this.url + '160c6ff9e553b6556dddc408ae0b38ed', data, {headers: headers});
     }
 }

@@ -1,9 +1,10 @@
+
 .container {
     font: 14px Verdana, sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 720px;
+    width: 100%;
     margin: 50px;
 }
 
@@ -53,5 +54,4 @@ app-signup {
     font-size: 16px;
     font-weight: bold;
 }
-
 
