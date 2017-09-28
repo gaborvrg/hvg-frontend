@@ -26,7 +26,7 @@ const APP_ROUTES: Routes = [
     { path: 'helpdesk', component: HelpdeskComponent },
     { path: 'm3d', component: M3dkComponent },
     { path: 'masajanlat', component: MasajanlatComponent },
-    { path: 'admin', component: AdminComponent },
+    { path: 'D710D00A301F232FABA0ED7E1297384ED710D00A301F232FABA0ED7E1297384E', component: AdminComponent },
     { path: '**', component: HomeComponent}
 ];
 
