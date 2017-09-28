@@ -15,9 +15,8 @@ app-side {
     flex: 3;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     max-width: 720px;
-    margin: 30px;
+    margin: 10px;
 }
 
 .headerImg {
