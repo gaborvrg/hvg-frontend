@@ -3,7 +3,7 @@
 <form [formGroup]="myForm" (ngSubmit)="onSubmit()" style="display: flex; justify-content: space-around;" >
     <div style="display: inline">
         <label style="color:#828282;font-size: 12px;font-weight: lighter; margin-left: 10px;" for="name">Név</label>
-        <input placeholder="Név" type="text" id="name" formControlName="name">
+        <input placeholder="Név" type="text" id="name" formControlName="name" style="text-transform: capitalize;">
     </div>
     <div style="display: inline">
         <label style="color:#828282;font-size: 12px;font-weight: lighter; margin-left: 10px;" for="email">Email</label>
