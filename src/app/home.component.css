@@ -63,7 +63,8 @@ p.title {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: -40px;
+    /* margin-left: -40px; */
+    margin-left: -68px;
 }
 
 .masajanlat p.title {
@@ -103,8 +104,8 @@ input[type="checkbox"]{
     position: relative;
     top: -66px;
     left: 1px;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 36px;
     border-radius: 19px;
     -webkit-appearance: none;
     -moz-appearance: none;
