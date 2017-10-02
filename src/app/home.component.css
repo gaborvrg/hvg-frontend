@@ -112,10 +112,11 @@ input[type="checkbox"]{
     appearance: none;
     background-color: rgb(234, 234, 234);
     transition: all .3s linear;
+    outline: none;
 }
 
 input[type='checkbox']:checked {
-    background: rgb(150, 191, 255);
+    background: rgb(134, 255, 134);
 }
 
 .masajanlat-input {
