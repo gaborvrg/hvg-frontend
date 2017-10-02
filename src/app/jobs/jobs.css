@@ -9,6 +9,7 @@
 app-side {
     overflow-y: scroll;
     flex: 1;
+    height: 105vh;
 }
 
 .main {
@@ -16,7 +17,8 @@ app-side {
     display: flex;
     flex-direction: column;
     width: 55vw;
-    margin: 10px 26px 10px 0px;
+    height: 105vh;
+    margin: 10px 26px 3px 0px;
 }
 
 .headerImg {
