@@ -9,7 +9,7 @@
         <label style="color:#828282;font-size: 12px;font-weight: lighter; margin-left: 10px;" for="email">Email</label>
         <input placeholder="E-mail" type="email" id="email" formControlName="email">
     </div>
-    <button type="submit" [disabled]="!myForm.valid" style=" margin-top: 15px;">Elküld!</button>
+    <button type="submit" [disabled]="!myForm.valid" style=" margin-top: 15px;" >Elküld!</button>
 </form>
 
 <style type="text/css">
@@ -32,6 +32,7 @@ input[type="text"], input[type="email"] {
     box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     margin-bottom: 30px;
 }
+
 input[type="text"]:focus, input[type="email"]:focus {
     background-color: #e6f1f7;
     
